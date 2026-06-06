@@ -24,3 +24,4 @@ public interface TransactRepository extends CrudRepository<Transact, Integer> {
                         @Param("reason_code")String reason_code,
                         @Param("created_at")LocalDateTime created_at);
 }
+

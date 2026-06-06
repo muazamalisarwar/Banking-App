@@ -25,3 +25,4 @@ public class MailMessenger {
     }
     //End Of HTML Email Message Method
 }
+

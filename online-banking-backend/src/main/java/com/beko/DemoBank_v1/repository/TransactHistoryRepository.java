@@ -17,3 +17,4 @@ public interface TransactHistoryRepository extends CrudRepository<TransactionHis
     List<TransactionHistory> getTransactionRecordsByAccountId(@Param("account_id")int user_id);
 
 }
+

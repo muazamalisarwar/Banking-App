@@ -15,3 +15,4 @@ public class CustomError extends RuntimeException {
         return statusCode;
     }
 }
+

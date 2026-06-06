@@ -12,3 +12,4 @@ public interface PaymentHistoryRepository extends CrudRepository<PaymentHistory,
     @Query(value = "SELECT * FROM v_payments WHERE user_id = :user_id",nativeQuery = true)
     List<PaymentHistory> getPaymentsRecordsById(@Param("user_id")int user_id);
 }
+

@@ -39,3 +39,4 @@ public interface AccountRepository extends CrudRepository<Account, Integer> {
                            @Param("account_name") String account_name,
                            @Param("account_type") String account_type);
 }
+

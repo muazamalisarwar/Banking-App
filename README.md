@@ -83,3 +83,4 @@ React, Redux, Thunk usage. JavaScript experiences. Communication with backend. C
 - Muazam Ali - design and development.
 
   
+

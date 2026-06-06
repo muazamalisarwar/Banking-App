@@ -28,3 +28,4 @@ public class MailConfig {
     }
     //End of Email Config Method
 }
+

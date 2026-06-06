@@ -120,3 +120,4 @@ public class User {
     private LocalDateTime updated_at;
 
 }
+
