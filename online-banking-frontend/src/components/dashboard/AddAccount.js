@@ -118,7 +118,7 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
             variant="contained"
             color="primary"
             onClick={handleSaveAccount}
-            sx={{ backgroundColor: "#EB3D13" }}
+            sx={{ backgroundColor: "#FFC107", color: "#000" }}
           >
             Create Account
           </Button>

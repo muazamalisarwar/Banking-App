@@ -152,7 +152,7 @@ export default function Dashboard() {
         <AppBar
           position="absolute"
           open={open}
-          sx={{ backgroundColor: "#E69081" }}
+          sx={{ backgroundColor: "#009688" }}
         >
           <Toolbar
             sx={{
@@ -262,7 +262,7 @@ export default function Dashboard() {
                   variant="contained"
                   color="primary"
                   onClick={() => setIsFormOpen(true)}
-                  sx={{ backgroundColor: "#EB3D13" }}
+                  sx={{ backgroundColor: "#FFC107", color: "#000" }}
                 >
                   Add Account
                 </Button>
