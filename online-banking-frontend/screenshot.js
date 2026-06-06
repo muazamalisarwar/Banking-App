@@ -28,23 +28,33 @@ const fs = require('fs');
       defaultViewport: { width: 1280, height: 800 } 
     });
     const page = await browser.newPage();
+    page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+    page.on('pageerror', error => console.log('PAGE ERROR:', error.message));
+
+    console.log('Injecting mock localStorage for authenticated routes...');
+    await page.evaluateOnNewDocument(() => {
+      localStorage.setItem('userInfo', JSON.stringify({ access_token: 'dummy_token' }));
+    });
 
     console.log('Taking login page screenshot...');
     await page.goto('http://localhost:3000/', { waitUntil: 'networkidle2', timeout: 30000 });
+    await new Promise(r => setTimeout(r, 2000));
     await page.screenshot({ path: '../loginPage.png' });
 
     console.log('Taking register page screenshot...');
     await page.goto('http://localhost:3000/register', { waitUntil: 'networkidle2', timeout: 30000 });
+    await new Promise(r => setTimeout(r, 2000));
     await page.screenshot({ path: '../ProjectPage5.png' });
 
     console.log('Taking dashboard page screenshot...');
     await page.goto('http://localhost:3000/dashboard', { waitUntil: 'networkidle2', timeout: 30000 });
+    await new Promise(r => setTimeout(r, 2000));
     await page.screenshot({ path: '../ProjecPage1.png' });
 
     // Click Transact button to go to transact page
     console.log('Navigating to Transact page...');
     await page.evaluate(() => {
-       const buttons = Array.from(document.querySelectorAll('div'));
+       const buttons = Array.from(document.querySelectorAll('button'));
        const transactBtn = buttons.find(b => b.textContent && b.textContent.includes('Transact'));
        if(transactBtn) transactBtn.click();
     });
@@ -54,8 +64,8 @@ const fs = require('fs');
     // Click Transaction History to go to history page
     console.log('Navigating to Transaction History page...');
     await page.evaluate(() => {
-       const buttons = Array.from(document.querySelectorAll('div'));
-       const historyBtn = buttons.find(b => b.textContent && b.textContent.includes('Transaction History'));
+       const buttons = Array.from(document.querySelectorAll('button'));
+       const historyBtn = buttons.find(b => b.textContent && b.textContent.includes('Accounts'));
        if(historyBtn) historyBtn.click();
     });
     await new Promise(r => setTimeout(r, 2000));
