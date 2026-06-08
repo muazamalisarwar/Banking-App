@@ -9,3 +9,4 @@ export default function changeAccountReducer(state=initialState.currentAccount, 
             return state;
     }
 }
+

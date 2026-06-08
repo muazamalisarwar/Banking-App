@@ -9,3 +9,4 @@ node screenshot.js
 echo Killing node processes...
 taskkill /F /IM node.exe /T
 echo Finished!
+

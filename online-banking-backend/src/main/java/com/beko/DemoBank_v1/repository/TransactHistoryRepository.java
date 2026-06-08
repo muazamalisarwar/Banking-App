@@ -18,3 +18,4 @@ public interface TransactHistoryRepository extends CrudRepository<TransactionHis
 
 }
 
+

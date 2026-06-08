@@ -24,3 +24,4 @@ public class GlobalExceptionHandler {
 
     // Diğer istisnaları işlemek için başka yöntemler ekleyebilirsiniz.
 }
+

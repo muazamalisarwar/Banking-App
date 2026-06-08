@@ -13,3 +13,4 @@ public interface PaymentHistoryRepository extends CrudRepository<PaymentHistory,
     List<PaymentHistory> getPaymentsRecordsById(@Param("user_id")int user_id);
 }
 
+

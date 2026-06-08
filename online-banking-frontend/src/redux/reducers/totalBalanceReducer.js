@@ -9,3 +9,4 @@ export default function totalBalanceReducer(state=initialState.totalBalance, act
             return state;
     }
 }
+
